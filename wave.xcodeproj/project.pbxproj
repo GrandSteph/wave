@@ -14,7 +14,6 @@
 		BDD58916191D57D50019DA57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD58915191D57D50019DA57 /* main.m */; };
 		BDD5891A191D57D50019DA57 /* w1nAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD58919191D57D50019DA57 /* w1nAppDelegate.m */; };
 		BDD5891D191D57D50019DA57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD5891B191D57D50019DA57 /* Main.storyboard */; };
-		BDD58920191D57D50019DA57 /* w1nFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD5891F191D57D50019DA57 /* w1nFirstViewController.m */; };
 		BDD58923191D57D50019DA57 /* w1nSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD58922191D57D50019DA57 /* w1nSecondViewController.m */; };
 		BDD58925191D57D50019DA57 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD58924191D57D50019DA57 /* Images.xcassets */; };
 		BDD5892C191D57D50019DA57 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD5892B191D57D50019DA57 /* XCTest.framework */; };
@@ -22,6 +21,21 @@
 		BDD5892E191D57D50019DA57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD5890D191D57D50019DA57 /* UIKit.framework */; };
 		BDD58936191D57D50019DA57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDD58934191D57D50019DA57 /* InfoPlist.strings */; };
 		BDD58938191D57D50019DA57 /* waveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD58937191D57D50019DA57 /* waveTests.m */; };
+		BDD5894B191D58790019DA57 /* libCloudinary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD58948191D58790019DA57 /* libCloudinary.a */; };
+		BDD5894C191D587A0019DA57 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD58949191D58790019DA57 /* Parse.framework */; };
+		BDD5894E191D58B50019DA57 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD5894D191D58B50019DA57 /* AudioToolbox.framework */; };
+		BDD58950191D58BE0019DA57 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD5894F191D58BE0019DA57 /* CFNetwork.framework */; };
+		BDD58952191D58CB0019DA57 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD58951191D58CB0019DA57 /* CoreLocation.framework */; };
+		BDD58954191D58D30019DA57 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD58953191D58D30019DA57 /* libz.dylib */; };
+		BDD58956191D58D90019DA57 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD58955191D58D90019DA57 /* MobileCoreServices.framework */; };
+		BDD58958191D58E10019DA57 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD58957191D58E10019DA57 /* QuartzCore.framework */; };
+		BDD5895A191D58E90019DA57 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD58959191D58E90019DA57 /* Security.framework */; };
+		BDD5895C191D58EF0019DA57 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD5895B191D58EF0019DA57 /* StoreKit.framework */; };
+		BDD5895E191D58F70019DA57 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD5895D191D58F70019DA57 /* SystemConfiguration.framework */; };
+		BDD58960191D590C0019DA57 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD5895F191D590C0019DA57 /* Social.framework */; };
+		BDD58962191D59440019DA57 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD58961191D59440019DA57 /* FacebookSDK.framework */; };
+		BDD58967191D5B3B0019DA57 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD58966191D5B3B0019DA57 /* Accounts.framework */; };
+		BDD5896A191D646C0019DA57 /* w1nFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD58969191D646C0019DA57 /* w1nFeedTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +60,6 @@
 		BDD58918191D57D50019DA57 /* w1nAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = w1nAppDelegate.h; sourceTree = "<group>"; };
 		BDD58919191D57D50019DA57 /* w1nAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = w1nAppDelegate.m; sourceTree = "<group>"; };
 		BDD5891C191D57D50019DA57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BDD5891E191D57D50019DA57 /* w1nFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = w1nFirstViewController.h; sourceTree = "<group>"; };
-		BDD5891F191D57D50019DA57 /* w1nFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = w1nFirstViewController.m; sourceTree = "<group>"; };
 		BDD58921191D57D50019DA57 /* w1nSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = w1nSecondViewController.h; sourceTree = "<group>"; };
 		BDD58922191D57D50019DA57 /* w1nSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = w1nSecondViewController.m; sourceTree = "<group>"; };
 		BDD58924191D57D50019DA57 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -56,6 +68,27 @@
 		BDD58933191D57D50019DA57 /* waveTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "waveTests-Info.plist"; sourceTree = "<group>"; };
 		BDD58935191D57D50019DA57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BDD58937191D57D50019DA57 /* waveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = waveTests.m; sourceTree = "<group>"; };
+		BDD58942191D58790019DA57 /* CLCloudinary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLCloudinary.h; sourceTree = "<group>"; };
+		BDD58943191D58790019DA57 /* CLEagerTransformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLEagerTransformation.h; sourceTree = "<group>"; };
+		BDD58944191D58790019DA57 /* Cloudinary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cloudinary.h; sourceTree = "<group>"; };
+		BDD58945191D58790019DA57 /* CLTransformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTransformation.h; sourceTree = "<group>"; };
+		BDD58946191D58790019DA57 /* CLUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLUploader.h; sourceTree = "<group>"; };
+		BDD58948191D58790019DA57 /* libCloudinary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCloudinary.a; sourceTree = "<group>"; };
+		BDD58949191D58790019DA57 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		BDD5894D191D58B50019DA57 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		BDD5894F191D58BE0019DA57 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		BDD58951191D58CB0019DA57 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BDD58953191D58D30019DA57 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		BDD58955191D58D90019DA57 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		BDD58957191D58E10019DA57 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BDD58959191D58E90019DA57 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		BDD5895B191D58EF0019DA57 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		BDD5895D191D58F70019DA57 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BDD5895F191D590C0019DA57 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		BDD58961191D59440019DA57 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../751/addons/FacebookSDK.framework; sourceTree = "<group>"; };
+		BDD58966191D5B3B0019DA57 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		BDD58968191D646C0019DA57 /* w1nFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = w1nFeedTableViewController.h; sourceTree = "<group>"; };
+		BDD58969191D646C0019DA57 /* w1nFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = w1nFeedTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +96,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD58967191D5B3B0019DA57 /* Accounts.framework in Frameworks */,
+				BDD58962191D59440019DA57 /* FacebookSDK.framework in Frameworks */,
+				BDD58960191D590C0019DA57 /* Social.framework in Frameworks */,
+				BDD5895E191D58F70019DA57 /* SystemConfiguration.framework in Frameworks */,
+				BDD5895C191D58EF0019DA57 /* StoreKit.framework in Frameworks */,
+				BDD5895A191D58E90019DA57 /* Security.framework in Frameworks */,
+				BDD58958191D58E10019DA57 /* QuartzCore.framework in Frameworks */,
+				BDD58956191D58D90019DA57 /* MobileCoreServices.framework in Frameworks */,
+				BDD58954191D58D30019DA57 /* libz.dylib in Frameworks */,
+				BDD58952191D58CB0019DA57 /* CoreLocation.framework in Frameworks */,
+				BDD58950191D58BE0019DA57 /* CFNetwork.framework in Frameworks */,
+				BDD5894E191D58B50019DA57 /* AudioToolbox.framework in Frameworks */,
+				BDD5894B191D58790019DA57 /* libCloudinary.a in Frameworks */,
+				BDD5894C191D587A0019DA57 /* Parse.framework in Frameworks */,
+				BDD5890A191D57D50019DA57 /* Foundation.framework in Frameworks */,
 				BDD5890C191D57D50019DA57 /* CoreGraphics.framework in Frameworks */,
 				BDD5890E191D57D50019DA57 /* UIKit.framework in Frameworks */,
-				BDD5890A191D57D50019DA57 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +151,21 @@
 		BDD58908191D57D50019DA57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BDD58966191D5B3B0019DA57 /* Accounts.framework */,
+				BDD58961191D59440019DA57 /* FacebookSDK.framework */,
+				BDD5895F191D590C0019DA57 /* Social.framework */,
+				BDD5895D191D58F70019DA57 /* SystemConfiguration.framework */,
+				BDD5895B191D58EF0019DA57 /* StoreKit.framework */,
+				BDD58959191D58E90019DA57 /* Security.framework */,
+				BDD58957191D58E10019DA57 /* QuartzCore.framework */,
+				BDD58955191D58D90019DA57 /* MobileCoreServices.framework */,
+				BDD58953191D58D30019DA57 /* libz.dylib */,
+				BDD58951191D58CB0019DA57 /* CoreLocation.framework */,
+				BDD5894F191D58BE0019DA57 /* CFNetwork.framework */,
+				BDD5894D191D58B50019DA57 /* AudioToolbox.framework */,
+				BDD58941191D58790019DA57 /* Cloudinary */,
+				BDD58948191D58790019DA57 /* libCloudinary.a */,
+				BDD58949191D58790019DA57 /* Parse.framework */,
 				BDD58909191D57D50019DA57 /* Foundation.framework */,
 				BDD5890B191D57D50019DA57 /* CoreGraphics.framework */,
 				BDD5890D191D57D50019DA57 /* UIKit.framework */,
@@ -118,12 +180,12 @@
 				BDD58918191D57D50019DA57 /* w1nAppDelegate.h */,
 				BDD58919191D57D50019DA57 /* w1nAppDelegate.m */,
 				BDD5891B191D57D50019DA57 /* Main.storyboard */,
-				BDD5891E191D57D50019DA57 /* w1nFirstViewController.h */,
-				BDD5891F191D57D50019DA57 /* w1nFirstViewController.m */,
 				BDD58921191D57D50019DA57 /* w1nSecondViewController.h */,
 				BDD58922191D57D50019DA57 /* w1nSecondViewController.m */,
 				BDD58924191D57D50019DA57 /* Images.xcassets */,
 				BDD58910191D57D50019DA57 /* Supporting Files */,
+				BDD58968191D646C0019DA57 /* w1nFeedTableViewController.h */,
+				BDD58969191D646C0019DA57 /* w1nFeedTableViewController.m */,
 			);
 			path = wave;
 			sourceTree = "<group>";
@@ -155,6 +217,18 @@
 				BDD58934191D57D50019DA57 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BDD58941191D58790019DA57 /* Cloudinary */ = {
+			isa = PBXGroup;
+			children = (
+				BDD58942191D58790019DA57 /* CLCloudinary.h */,
+				BDD58943191D58790019DA57 /* CLEagerTransformation.h */,
+				BDD58944191D58790019DA57 /* Cloudinary.h */,
+				BDD58945191D58790019DA57 /* CLTransformation.h */,
+				BDD58946191D58790019DA57 /* CLUploader.h */,
+			);
+			path = Cloudinary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,10 +329,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD5896A191D646C0019DA57 /* w1nFeedTableViewController.m in Sources */,
 				BDD58916191D57D50019DA57 /* main.m in Sources */,
 				BDD58923191D57D50019DA57 /* w1nSecondViewController.m in Sources */,
 				BDD5891A191D57D50019DA57 /* w1nAppDelegate.m in Sources */,
-				BDD58920191D57D50019DA57 /* w1nFirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,9 +457,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/751/addons,
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "wave/wave-Prefix.pch";
 				INFOPLIST_FILE = "wave/wave-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -396,9 +481,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/751/addons,
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "wave/wave-Prefix.pch";
 				INFOPLIST_FILE = "wave/wave-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
