@@ -14,7 +14,6 @@
 		BDD58916191D57D50019DA57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD58915191D57D50019DA57 /* main.m */; };
 		BDD5891A191D57D50019DA57 /* w1nAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD58919191D57D50019DA57 /* w1nAppDelegate.m */; };
 		BDD5891D191D57D50019DA57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD5891B191D57D50019DA57 /* Main.storyboard */; };
-		BDD58923191D57D50019DA57 /* w1nSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD58922191D57D50019DA57 /* w1nSecondViewController.m */; };
 		BDD58925191D57D50019DA57 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD58924191D57D50019DA57 /* Images.xcassets */; };
 		BDD5892C191D57D50019DA57 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD5892B191D57D50019DA57 /* XCTest.framework */; };
 		BDD5892D191D57D50019DA57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD58909191D57D50019DA57 /* Foundation.framework */; };
@@ -35,7 +34,10 @@
 		BDD58960191D590C0019DA57 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD5895F191D590C0019DA57 /* Social.framework */; };
 		BDD58962191D59440019DA57 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD58961191D59440019DA57 /* FacebookSDK.framework */; };
 		BDD58967191D5B3B0019DA57 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD58966191D5B3B0019DA57 /* Accounts.framework */; };
-		BDD5896A191D646C0019DA57 /* w1nFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD58969191D646C0019DA57 /* w1nFeedTableViewController.m */; };
+		BDD5896D191D67370019DA57 /* FeedPFTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD5896C191D67370019DA57 /* FeedPFTableViewController.m */; };
+		BDD58970191D75570019DA57 /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD5896F191D75570019DA57 /* CreateViewController.m */; };
+		BDD58973191EE0D40019DA57 /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD58972191EE0D40019DA57 /* EventTableViewCell.m */; };
+		BDD58976191F055A0019DA57 /* TimedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD58975191F055A0019DA57 /* TimedViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +62,6 @@
 		BDD58918191D57D50019DA57 /* w1nAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = w1nAppDelegate.h; sourceTree = "<group>"; };
 		BDD58919191D57D50019DA57 /* w1nAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = w1nAppDelegate.m; sourceTree = "<group>"; };
 		BDD5891C191D57D50019DA57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BDD58921191D57D50019DA57 /* w1nSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = w1nSecondViewController.h; sourceTree = "<group>"; };
-		BDD58922191D57D50019DA57 /* w1nSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = w1nSecondViewController.m; sourceTree = "<group>"; };
 		BDD58924191D57D50019DA57 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BDD5892A191D57D50019DA57 /* waveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = waveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD5892B191D57D50019DA57 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -87,8 +87,14 @@
 		BDD5895F191D590C0019DA57 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		BDD58961191D59440019DA57 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../751/addons/FacebookSDK.framework; sourceTree = "<group>"; };
 		BDD58966191D5B3B0019DA57 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		BDD58968191D646C0019DA57 /* w1nFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = w1nFeedTableViewController.h; sourceTree = "<group>"; };
-		BDD58969191D646C0019DA57 /* w1nFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = w1nFeedTableViewController.m; sourceTree = "<group>"; };
+		BDD5896B191D67370019DA57 /* FeedPFTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedPFTableViewController.h; sourceTree = "<group>"; };
+		BDD5896C191D67370019DA57 /* FeedPFTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedPFTableViewController.m; sourceTree = "<group>"; };
+		BDD5896E191D75570019DA57 /* CreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateViewController.h; sourceTree = "<group>"; };
+		BDD5896F191D75570019DA57 /* CreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateViewController.m; sourceTree = "<group>"; };
+		BDD58971191EE0D40019DA57 /* EventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewCell.h; sourceTree = "<group>"; };
+		BDD58972191EE0D40019DA57 /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
+		BDD58974191F055A0019DA57 /* TimedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimedViewController.h; sourceTree = "<group>"; };
+		BDD58975191F055A0019DA57 /* TimedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimedViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,13 +103,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDD58967191D5B3B0019DA57 /* Accounts.framework in Frameworks */,
-				BDD58962191D59440019DA57 /* FacebookSDK.framework in Frameworks */,
 				BDD58960191D590C0019DA57 /* Social.framework in Frameworks */,
 				BDD5895E191D58F70019DA57 /* SystemConfiguration.framework in Frameworks */,
 				BDD5895C191D58EF0019DA57 /* StoreKit.framework in Frameworks */,
 				BDD5895A191D58E90019DA57 /* Security.framework in Frameworks */,
 				BDD58958191D58E10019DA57 /* QuartzCore.framework in Frameworks */,
 				BDD58956191D58D90019DA57 /* MobileCoreServices.framework in Frameworks */,
+				BDD58962191D59440019DA57 /* FacebookSDK.framework in Frameworks */,
 				BDD58954191D58D30019DA57 /* libz.dylib in Frameworks */,
 				BDD58952191D58CB0019DA57 /* CoreLocation.framework in Frameworks */,
 				BDD58950191D58BE0019DA57 /* CFNetwork.framework in Frameworks */,
@@ -180,12 +186,16 @@
 				BDD58918191D57D50019DA57 /* w1nAppDelegate.h */,
 				BDD58919191D57D50019DA57 /* w1nAppDelegate.m */,
 				BDD5891B191D57D50019DA57 /* Main.storyboard */,
-				BDD58921191D57D50019DA57 /* w1nSecondViewController.h */,
-				BDD58922191D57D50019DA57 /* w1nSecondViewController.m */,
+				BDD5896B191D67370019DA57 /* FeedPFTableViewController.h */,
+				BDD5896C191D67370019DA57 /* FeedPFTableViewController.m */,
+				BDD5896E191D75570019DA57 /* CreateViewController.h */,
+				BDD5896F191D75570019DA57 /* CreateViewController.m */,
 				BDD58924191D57D50019DA57 /* Images.xcassets */,
 				BDD58910191D57D50019DA57 /* Supporting Files */,
-				BDD58968191D646C0019DA57 /* w1nFeedTableViewController.h */,
-				BDD58969191D646C0019DA57 /* w1nFeedTableViewController.m */,
+				BDD58971191EE0D40019DA57 /* EventTableViewCell.h */,
+				BDD58972191EE0D40019DA57 /* EventTableViewCell.m */,
+				BDD58974191F055A0019DA57 /* TimedViewController.h */,
+				BDD58975191F055A0019DA57 /* TimedViewController.m */,
 			);
 			path = wave;
 			sourceTree = "<group>";
@@ -329,10 +339,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDD5896A191D646C0019DA57 /* w1nFeedTableViewController.m in Sources */,
+				BDD58976191F055A0019DA57 /* TimedViewController.m in Sources */,
 				BDD58916191D57D50019DA57 /* main.m in Sources */,
-				BDD58923191D57D50019DA57 /* w1nSecondViewController.m in Sources */,
+				BDD58970191D75570019DA57 /* CreateViewController.m in Sources */,
+				BDD5896D191D67370019DA57 /* FeedPFTableViewController.m in Sources */,
 				BDD5891A191D57D50019DA57 /* w1nAppDelegate.m in Sources */,
+				BDD58973191EE0D40019DA57 /* EventTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

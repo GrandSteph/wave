@@ -1,13 +1,14 @@
 //
 //  w1nSecondViewController.h
-//  wave
+//  WaveIn
 //
-//  Created by GrandSteph on 5/9/14.
+//  Created by GrandSteph on 4/30/14.
 //  Copyright (c) 2014 GrandSteph. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/parse.h>
 
-@interface w1nSecondViewController : UIViewController
+@interface CreateViewController : UIViewController
 
 @end

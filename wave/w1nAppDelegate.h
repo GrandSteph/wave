@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Parse/parse.h"
 
 @interface w1nAppDelegate : UIResponder <UIApplicationDelegate>
 
