@@ -165,6 +165,8 @@
     if (cell == nil) {
         cell = [[EventTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
+    //set delegate for imagepicker
+    cell.delegate = self.navigationController;
     
     cell.last20Label.hidden = YES;
     
@@ -192,13 +194,7 @@
     dateFormat.doesRelativeDateFormatting = YES;
     //[dateFormat setDateFormat:@"EE, dd LLLL HH:mm"];
     
-    cell.eventDate.text = [dateFormat stringFromDate:eventDate];
-    
-    
-    
-    
-
-    
+    cell.eventDateLabel.text = [dateFormat stringFromDate:eventDate];    
 
 //    cell.eventTimerLabel.text = [NSString stringWithFormat:@"%@",[object objectForKey:@"date"]];
     

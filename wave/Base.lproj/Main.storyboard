@@ -47,7 +47,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="eventDate" destination="GzW-vd-Xgg" id="8IM-gn-Xm9"/>
+                                    <outlet property="eventDateLabel" destination="GzW-vd-Xgg" id="RfS-QP-bWg"/>
                                     <outlet property="eventDescription" destination="qef-oZ-XNg" id="eJf-UW-7jZ"/>
                                     <outlet property="eventTimerLabel" destination="1hV-5t-vgJ" id="c1b-ho-uVE"/>
                                     <outlet property="last20Label" destination="69G-dm-eaM" id="wLI-4F-uH6"/>

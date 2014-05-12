@@ -37,7 +37,7 @@
 		BDD5896D191D67370019DA57 /* FeedPFTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD5896C191D67370019DA57 /* FeedPFTableViewController.m */; };
 		BDD58970191D75570019DA57 /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD5896F191D75570019DA57 /* CreateViewController.m */; };
 		BDD58973191EE0D40019DA57 /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD58972191EE0D40019DA57 /* EventTableViewCell.m */; };
-		BDD58976191F055A0019DA57 /* TimedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD58975191F055A0019DA57 /* TimedViewController.m */; };
+		BDD58976191F055A0019DA57 /* TimedPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD58975191F055A0019DA57 /* TimedPickerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,8 +93,8 @@
 		BDD5896F191D75570019DA57 /* CreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateViewController.m; sourceTree = "<group>"; };
 		BDD58971191EE0D40019DA57 /* EventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewCell.h; sourceTree = "<group>"; };
 		BDD58972191EE0D40019DA57 /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
-		BDD58974191F055A0019DA57 /* TimedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimedViewController.h; sourceTree = "<group>"; };
-		BDD58975191F055A0019DA57 /* TimedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimedViewController.m; sourceTree = "<group>"; };
+		BDD58974191F055A0019DA57 /* TimedPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimedPickerController.h; sourceTree = "<group>"; };
+		BDD58975191F055A0019DA57 /* TimedPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimedPickerController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,8 +194,8 @@
 				BDD58910191D57D50019DA57 /* Supporting Files */,
 				BDD58971191EE0D40019DA57 /* EventTableViewCell.h */,
 				BDD58972191EE0D40019DA57 /* EventTableViewCell.m */,
-				BDD58974191F055A0019DA57 /* TimedViewController.h */,
-				BDD58975191F055A0019DA57 /* TimedViewController.m */,
+				BDD58974191F055A0019DA57 /* TimedPickerController.h */,
+				BDD58975191F055A0019DA57 /* TimedPickerController.m */,
 			);
 			path = wave;
 			sourceTree = "<group>";
@@ -339,7 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDD58976191F055A0019DA57 /* TimedViewController.m in Sources */,
+				BDD58976191F055A0019DA57 /* TimedPickerController.m in Sources */,
 				BDD58916191D57D50019DA57 /* main.m in Sources */,
 				BDD58970191D75570019DA57 /* CreateViewController.m in Sources */,
 				BDD5896D191D67370019DA57 /* FeedPFTableViewController.m in Sources */,
