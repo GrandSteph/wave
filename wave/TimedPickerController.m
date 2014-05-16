@@ -37,10 +37,12 @@
     return self;
 }
 
-- (id) initBySteph{
+- (id) initWithCloud:(NSString *) eventID {
     self=[super init];
     if (self) {
         // Custom initialization
+        self.eventID = eventID;
+        
         self.delegate = self;
         self.sourceType = UIImagePickerControllerSourceTypeCamera;
         self.cameraDevice = UIImagePickerControllerCameraDeviceFront;
@@ -81,7 +83,7 @@
     self.pictureData = pictureData;
     
     CLUploader *theUploader = [[CLUploader alloc] init:self.cloud delegate:self];
-    [theUploader upload:pictureData options:@{@"folder":@"Wave1n-Test"}];
+    [theUploader upload:pictureData options:@{@"public_id":[NSString stringWithFormat:@"%@STEPHANE",self.eventID]}];
     
     [theUploader upload:pictureData options:nil withCompletion:^(NSDictionary *successResult, NSString *errorResult, NSInteger code, id context) {
         //completion
@@ -91,41 +93,18 @@
         //progress
         NSLog(@"Going...");
     }];
-    
-    
-    
-
-
-    
 }
-
-/*- (void) uploaderSuccess:(NSDictionary*)result context:(id)context {
-    //NSString* url = [result valueForKey:@"url"];
-    NSLog(@"Upload success. Full result=%@", result);
-    
-}
-
-- (void) uploaderError:(NSString*)result code:(int) code context:(id)context {
-    NSLog(@"Upload error: %@, %d", result, code);
-}
-
-- (void) uploaderProgress:(NSInteger)bytesWritten totalBytesWritten:(NSInteger)totalBytesWritten totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite context:(id)context {
-    NSLog(@"Upload progress: %d/%d (+%d)", totalBytesWritten, totalBytesExpectedToWrite, bytesWritten);
-    
-    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-    [formatter setNumberStyle:(NSNumberFormatterPercentStyle)];
-    float uploadProgress = (float)totalBytesWritten / (float)totalBytesExpectedToWrite;
-    NSString *formattedUploadProgress = [formatter stringFromNumber:[NSNumber numberWithFloat:uploadProgress]];
-    NSLog(@"Upload in progress: %@", formattedUploadProgress);
-}*/
 
 - (UIImage*)resizeImageWithImage:(UIImage*)image toPixelLongest:(int)newLongest
 {
-    CGSize newSize = CGSizeMake(newLongest, newLongest / image.size.height * image.size.width);
+    //Compute size for lanscape
+    CGSize newSize = CGSizeMake(newLongest, newLongest * (image.size.height/image.size.width));
     
-//    if (image.size.width > image.size.height) {
-//        newSize = CGSizeMake(newLongest / image.size.height * image.size.width,newLongest);
-//    }
+    if (image.imageOrientation == UIImageOrientationUp) {
+        //portrait
+        newSize.width = newLongest * (image.size.width/image.size.height);
+        newSize.height = newLongest;
+    }
     
     // Create a graphics image context
     UIGraphicsBeginImageContext(newSize);

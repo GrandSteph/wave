@@ -7,6 +7,8 @@
 
 #import "FeedPFTableViewController.h"
 #import "EventTableViewCell.h"
+#import "eventPictures.h"
+
 
 @implementation FeedPFTableViewController
 
@@ -167,9 +169,9 @@
     }
     //set delegate for imagepicker
     cell.delegate = self.navigationController;
-    
+    cell.viewButton.hidden = YES;
     cell.last20Label.hidden = YES;
-    
+
     //Event Timer
     NSDate *eventDate = [object objectForKey:@"date"];
     NSTimeInterval secondsLeft = [eventDate timeIntervalSinceNow];
@@ -177,7 +179,9 @@
     cell.secondsLeft = [NSNumber numberWithDouble: secondsLeft];
     
     if (secondsLeft < 0) {
-        cell.eventTimerLabel.text = @"Past Event";
+        cell.eventTimerLabel.hidden = YES;
+        cell.viewButton.hidden = NO;
+        
     } else {
         [NSTimer scheduledTimerWithTimeInterval: 1.0
                                          target: cell
@@ -187,6 +191,8 @@
     }
  
     // Event Description
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.eventID = object.objectId;
     cell.eventDescription.text = [NSString stringWithFormat:@"%@", [object objectForKey:@"description"]];
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     dateFormat.dateStyle = NSDateFormatterShortStyle;
@@ -199,6 +205,20 @@
 //    cell.eventTimerLabel.text = [NSString stringWithFormat:@"%@",[object objectForKey:@"date"]];
     
     return cell;
+}
+
+
+#pragma mark - Segue
+
+- (void) prepareForSegue:(UIStoryboardSegue *) segue sender:(id)sender {
+    
+    if([segue.identifier isEqualToString:@"showEventPictures"]) {
+        EventPictures *pix = segue.destinationViewController;
+        
+        EventTableViewCell *cell = sender;
+        
+        pix.eventID = cell.eventID;
+    }
 }
 
 

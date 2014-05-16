@@ -13,7 +13,8 @@
 @interface TimedPickerController : UIImagePickerController <UINavigationControllerDelegate, UIImagePickerControllerDelegate,CLUploaderDelegate>
 
 @property (strong,nonatomic) NSData *pictureData;
+@property (strong,nonatomic) NSString *eventID;
 
-- (id) initBySteph;
+- (id) initWithCloud:(NSString *) eventID;
 
 @end

@@ -38,6 +38,7 @@
 		BDD58970191D75570019DA57 /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD5896F191D75570019DA57 /* CreateViewController.m */; };
 		BDD58973191EE0D40019DA57 /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD58972191EE0D40019DA57 /* EventTableViewCell.m */; };
 		BDD58976191F055A0019DA57 /* TimedPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD58975191F055A0019DA57 /* TimedPickerController.m */; };
+		BDD5897F192558E80019DA57 /* EventPictures.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD5897E192558E80019DA57 /* EventPictures.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,8 @@
 		BDD58972191EE0D40019DA57 /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
 		BDD58974191F055A0019DA57 /* TimedPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimedPickerController.h; sourceTree = "<group>"; };
 		BDD58975191F055A0019DA57 /* TimedPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimedPickerController.m; sourceTree = "<group>"; };
+		BDD5897D192558E80019DA57 /* EventPictures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventPictures.h; path = ../EventPictures.h; sourceTree = "<group>"; };
+		BDD5897E192558E80019DA57 /* EventPictures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventPictures.m; path = ../EventPictures.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +186,8 @@
 		BDD5890F191D57D50019DA57 /* wave */ = {
 			isa = PBXGroup;
 			children = (
+				BDD5897D192558E80019DA57 /* EventPictures.h */,
+				BDD5897E192558E80019DA57 /* EventPictures.m */,
 				BDD58918191D57D50019DA57 /* w1nAppDelegate.h */,
 				BDD58919191D57D50019DA57 /* w1nAppDelegate.m */,
 				BDD5891B191D57D50019DA57 /* Main.storyboard */,
@@ -289,6 +294,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = GrandSteph;
 				TargetAttributes = {
+					BDD58905191D57D50019DA57 = {
+						DevelopmentTeam = A343GVYGQ6;
+					};
 					BDD58929191D57D50019DA57 = {
 						TestTargetID = BDD58905191D57D50019DA57;
 					};
@@ -339,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD5897F192558E80019DA57 /* EventPictures.m in Sources */,
 				BDD58976191F055A0019DA57 /* TimedPickerController.m in Sources */,
 				BDD58916191D57D50019DA57 /* main.m in Sources */,
 				BDD58970191D75570019DA57 /* CreateViewController.m in Sources */,
@@ -469,6 +478,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -493,6 +503,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

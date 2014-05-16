@@ -14,10 +14,15 @@
 @property (strong, nonatomic) IBOutlet UILabel *eventTimerLabel;
 @property (strong, nonatomic) IBOutlet UILabel *eventDateLabel;
 @property (strong, nonatomic) IBOutlet UILabel *last20Label;
+@property (strong, nonatomic) IBOutlet UIButton *viewButton;
+
+
 
 @property (nonatomic,strong) NSNumber *secondsLeft;
 @property (nonatomic,strong) id delegate;
+@property (nonatomic,strong) NSString *eventID;
 
 - (void) handleTimerTick:(NSTimer*)theTimer;
+
 
 @end
