@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CLCloudinary.h"
 
 @interface EventPictures : UIViewController
 
@@ -14,5 +15,9 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *eventDescLabel;
 
+@property (strong, nonatomic) IBOutlet UIImageView *image1;
+@property (strong, nonatomic) IBOutlet UIImageView *image2;
+@property (strong, nonatomic) IBOutlet UIImageView *image3;
+@property (strong, nonatomic) IBOutlet UIImageView *image5;
 
 @end

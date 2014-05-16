@@ -9,7 +9,6 @@
 #import "EventTableViewCell.h"
 #import "eventPictures.h"
 
-
 @implementation FeedPFTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -28,7 +27,7 @@
         self.title = @"The feed Timer";
         
         // Whether the built-in pull-to-refresh is enabled
-        self.pullToRefreshEnabled = YES;
+        self.pullToRefreshEnabled = NO;
         
         // Whether the built-in pagination is enabled
         self.paginationEnabled = NO;
@@ -55,7 +54,7 @@
         self.title = @"The feed Timer";
         
         // Whether the built-in pull-to-refresh is enabled
-        self.pullToRefreshEnabled = YES;
+        self.pullToRefreshEnabled = NO;
         
         // Whether the built-in pagination is enabled
         self.paginationEnabled = NO;
@@ -93,6 +92,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    //[self loadObjects];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -169,8 +169,8 @@
     }
     //set delegate for imagepicker
     cell.delegate = self.navigationController;
-    cell.viewButton.hidden = YES;
     cell.last20Label.hidden = YES;
+    cell.editingAccessoryView.hidden = YES;
 
     //Event Timer
     NSDate *eventDate = [object objectForKey:@"date"];
@@ -180,14 +180,17 @@
     
     if (secondsLeft < 0) {
         cell.eventTimerLabel.hidden = YES;
-        cell.viewButton.hidden = NO;
-        
+        if (cell.cellTimer) {
+            [cell.cellTimer invalidate];
+        }
     } else {
-        [NSTimer scheduledTimerWithTimeInterval: 1.0
+        if (cell.cellTimer == nil) {
+            [NSTimer scheduledTimerWithTimeInterval: 1.0
                                          target: cell
                                        selector: @selector(handleTimerTick:)
                                        userInfo: nil
                                         repeats: YES];
+        }
     }
  
     // Event Description

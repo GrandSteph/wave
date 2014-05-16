@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDA6C04319266EDD00FD7866 /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA6C04219266EDD00FD7866 /* FeedTableViewController.m */; };
 		BDD5890A191D57D50019DA57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD58909191D57D50019DA57 /* Foundation.framework */; };
 		BDD5890C191D57D50019DA57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD5890B191D57D50019DA57 /* CoreGraphics.framework */; };
 		BDD5890E191D57D50019DA57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD5890D191D57D50019DA57 /* UIKit.framework */; };
@@ -52,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BDA6C04119266EDD00FD7866 /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
+		BDA6C04219266EDD00FD7866 /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
 		BDD58906191D57D50019DA57 /* wave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDD58909191D57D50019DA57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BDD5890B191D57D50019DA57 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -191,6 +194,8 @@
 				BDD58918191D57D50019DA57 /* w1nAppDelegate.h */,
 				BDD58919191D57D50019DA57 /* w1nAppDelegate.m */,
 				BDD5891B191D57D50019DA57 /* Main.storyboard */,
+				BDA6C04119266EDD00FD7866 /* FeedTableViewController.h */,
+				BDA6C04219266EDD00FD7866 /* FeedTableViewController.m */,
 				BDD5896B191D67370019DA57 /* FeedPFTableViewController.h */,
 				BDD5896C191D67370019DA57 /* FeedPFTableViewController.m */,
 				BDD5896E191D75570019DA57 /* CreateViewController.h */,
@@ -354,6 +359,7 @@
 				BDD5896D191D67370019DA57 /* FeedPFTableViewController.m in Sources */,
 				BDD5891A191D57D50019DA57 /* w1nAppDelegate.m in Sources */,
 				BDD58973191EE0D40019DA57 /* EventTableViewCell.m in Sources */,
+				BDA6C04319266EDD00FD7866 /* FeedTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +588,7 @@
 				BDD5893D191D57D50019DA57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BDD5893E191D57D50019DA57 /* Build configuration list for PBXNativeTarget "waveTests" */ = {
 			isa = XCConfigurationList;
@@ -590,6 +597,7 @@
 				BDD58940191D57D50019DA57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

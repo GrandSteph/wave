@@ -25,6 +25,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     //[self.myButton setTitle:@"Create Event" forState:UIControlStateNormal];
+    [self.datePiecker setDate:[NSDate dateWithTimeInterval:60 sinceDate:[NSDate date]]];
     
 
 }

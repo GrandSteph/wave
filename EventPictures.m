@@ -28,6 +28,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.eventDescLabel.text = self.eventID;
+    
+    //Cloudinary stuff
+    CLCloudinary *cloudinary = [[CLCloudinary alloc] init];
+    [cloudinary.config setValue:@"dviu7tmrq" forKey:@"cloud_name"];
+    [cloudinary.config setValue:@"252529254152278" forKey:@"api_key"];
+    [cloudinary.config setValue:@"_EEzcqFdOcrv4ENrhroBepzWlMo" forKey:@"api_secret"];
+
+    NSString *url1 = [cloudinary url:[NSString stringWithFormat:@"%@STEPHANE.jpg",self.eventID]];
+    NSString *url2 = [cloudinary url:[NSString stringWithFormat:@"%@PHILIPPE.jpg",self.eventID]];
+    NSString *url3 = [cloudinary url:[NSString stringWithFormat:@"%@SOPHIE.jpg",self.eventID]];
+    
+    self.image1.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:url1]]];
+    self.image2.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:url2]]];
+    self.image3.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:url3]]];
+    
 }
 
 - (void)didReceiveMemoryWarning
