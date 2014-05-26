@@ -15,6 +15,8 @@
 @property (strong,nonatomic) NSData *pictureData;
 @property (strong,nonatomic) NSString *eventID;
 
-- (id) initWithCloud:(NSString *) eventID;
+- (id) initWithCloud:(NSString *) eventID secondsToSnap:(NSNumber *) secondsToSnap;
+
+- (void) countdownTick:(NSTimer *) theTimer;
 
 @end

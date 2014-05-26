@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD4869F7192D7DE800F01884 /* PickerOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD4869F6192D7DE800F01884 /* PickerOverlay.xib */; };
 		BDA6C04319266EDD00FD7866 /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA6C04219266EDD00FD7866 /* FeedTableViewController.m */; };
 		BDD5890A191D57D50019DA57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD58909191D57D50019DA57 /* Foundation.framework */; };
 		BDD5890C191D57D50019DA57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD5890B191D57D50019DA57 /* CoreGraphics.framework */; };
@@ -35,7 +36,6 @@
 		BDD58960191D590C0019DA57 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD5895F191D590C0019DA57 /* Social.framework */; };
 		BDD58962191D59440019DA57 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD58961191D59440019DA57 /* FacebookSDK.framework */; };
 		BDD58967191D5B3B0019DA57 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD58966191D5B3B0019DA57 /* Accounts.framework */; };
-		BDD5896D191D67370019DA57 /* FeedPFTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD5896C191D67370019DA57 /* FeedPFTableViewController.m */; };
 		BDD58970191D75570019DA57 /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD5896F191D75570019DA57 /* CreateViewController.m */; };
 		BDD58973191EE0D40019DA57 /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD58972191EE0D40019DA57 /* EventTableViewCell.m */; };
 		BDD58976191F055A0019DA57 /* TimedPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD58975191F055A0019DA57 /* TimedPickerController.m */; };
@@ -53,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BD4869F6192D7DE800F01884 /* PickerOverlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerOverlay.xib; sourceTree = "<group>"; };
 		BDA6C04119266EDD00FD7866 /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
 		BDA6C04219266EDD00FD7866 /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
 		BDD58906191D57D50019DA57 /* wave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wave.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,8 +92,6 @@
 		BDD5895F191D590C0019DA57 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		BDD58961191D59440019DA57 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../751/addons/FacebookSDK.framework; sourceTree = "<group>"; };
 		BDD58966191D5B3B0019DA57 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		BDD5896B191D67370019DA57 /* FeedPFTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedPFTableViewController.h; sourceTree = "<group>"; };
-		BDD5896C191D67370019DA57 /* FeedPFTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedPFTableViewController.m; sourceTree = "<group>"; };
 		BDD5896E191D75570019DA57 /* CreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateViewController.h; sourceTree = "<group>"; };
 		BDD5896F191D75570019DA57 /* CreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateViewController.m; sourceTree = "<group>"; };
 		BDD58971191EE0D40019DA57 /* EventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewCell.h; sourceTree = "<group>"; };
@@ -196,8 +195,6 @@
 				BDD5891B191D57D50019DA57 /* Main.storyboard */,
 				BDA6C04119266EDD00FD7866 /* FeedTableViewController.h */,
 				BDA6C04219266EDD00FD7866 /* FeedTableViewController.m */,
-				BDD5896B191D67370019DA57 /* FeedPFTableViewController.h */,
-				BDD5896C191D67370019DA57 /* FeedPFTableViewController.m */,
 				BDD5896E191D75570019DA57 /* CreateViewController.h */,
 				BDD5896F191D75570019DA57 /* CreateViewController.m */,
 				BDD58924191D57D50019DA57 /* Images.xcassets */,
@@ -206,6 +203,7 @@
 				BDD58972191EE0D40019DA57 /* EventTableViewCell.m */,
 				BDD58974191F055A0019DA57 /* TimedPickerController.h */,
 				BDD58975191F055A0019DA57 /* TimedPickerController.m */,
+				BD4869F6192D7DE800F01884 /* PickerOverlay.xib */,
 			);
 			path = wave;
 			sourceTree = "<group>";
@@ -333,6 +331,7 @@
 			files = (
 				BDD58925191D57D50019DA57 /* Images.xcassets in Resources */,
 				BDD58914191D57D50019DA57 /* InfoPlist.strings in Resources */,
+				BD4869F7192D7DE800F01884 /* PickerOverlay.xib in Resources */,
 				BDD5891D191D57D50019DA57 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,7 +355,6 @@
 				BDD58976191F055A0019DA57 /* TimedPickerController.m in Sources */,
 				BDD58916191D57D50019DA57 /* main.m in Sources */,
 				BDD58970191D75570019DA57 /* CreateViewController.m in Sources */,
-				BDD5896D191D67370019DA57 /* FeedPFTableViewController.m in Sources */,
 				BDD5891A191D57D50019DA57 /* w1nAppDelegate.m in Sources */,
 				BDD58973191EE0D40019DA57 /* EventTableViewCell.m in Sources */,
 				BDA6C04319266EDD00FD7866 /* FeedTableViewController.m in Sources */,

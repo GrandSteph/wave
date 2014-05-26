@@ -110,12 +110,14 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </state>
                                 <connections>
                                     <action selector="createEventButton:" destination="QUy-BD-bpt" eventType="touchUpInside" id="lmH-ZR-ac2"/>
+                                    <segue destination="pNQ-Oa-ldN" kind="unwind" unwindAction="unwindToFeed:" id="bj4-cQ-tuZ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Create" image="second" id="Z7h-1E-pvt"/>
+                    <navigationItem key="navigationItem" id="Xh5-iF-gIz"/>
                     <connections>
                         <outlet property="datePiecker" destination="eNC-fn-bQU" id="OEw-TV-p2x"/>
                         <outlet property="eventDescription" destination="NlZ-6d-TVz" id="Zh3-aI-YZd"/>
@@ -123,8 +125,9 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
+                <exit id="pNQ-Oa-ldN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="703" y="428"/>
+            <point key="canvasLocation" x="1735" y="-834"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Vex-rW-GRa">
@@ -138,7 +141,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </tabBar>
                     <connections>
                         <segue destination="Kns-us-TVj" kind="relationship" relationship="viewControllers" id="riz-wX-eBc"/>
-                        <segue destination="QUy-BD-bpt" kind="relationship" relationship="viewControllers" id="M8t-EP-wfW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
@@ -201,17 +203,23 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <outlet property="delegate" destination="mvR-60-e9y" id="m97-BL-3bb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Feed" id="3tZ-Av-pyT"/>
+                    <navigationItem key="navigationItem" title="Feed" id="3tZ-Av-pyT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ieV-8f-QUc">
+                            <connections>
+                                <segue destination="QUy-BD-bpt" kind="push" id="Ipa-Kd-rgJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omj-36-p1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1229" y="-220"/>
         </scene>
-        <!--Navigation Controller - newFeed-->
+        <!--Navigation Controller - Feed-->
         <scene sceneID="kcd-Yg-7Ax">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kns-us-TVj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="newFeed" id="0hv-Ro-078"/>
+                    <tabBarItem key="tabBarItem" title="Feed" id="0hv-Ro-078"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gtk-pL-egl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

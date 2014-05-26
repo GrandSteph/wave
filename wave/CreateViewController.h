@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Parse/parse.h>
+
 
 @interface CreateViewController : UIViewController
+
+@property (nonatomic,strong) NSMutableDictionary *event;
 
 @end

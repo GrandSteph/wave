@@ -55,7 +55,14 @@
     self.eventTimerLabel.text = [self.secondsLeft stringValue];
     self.last20Label.text = [self.secondsLeft stringValue];
     
-    if ([self.secondsLeft intValue] == 21) {
+    if ([self.secondsLeft intValue] > 23) {
+        self.eventTimerLabel.hidden = NO;
+        self.eventDateLabel.hidden = NO;
+        self.last20Label.Hidden = YES;
+    }
+
+    
+    if ([self.secondsLeft intValue] < 23 && [self.secondsLeft intValue] > 15) {
         //self.eventDescription.hidden = YES;
         self.eventTimerLabel.hidden = YES;
         self.eventDateLabel.hidden = YES;
@@ -63,28 +70,39 @@
     }
     
     //Camera interface trigger
-    if ([self.secondsLeft intValue] < 5) {
-        self.eventTimerLabel.hidden = YES;
+    if ([self.secondsLeft intValue] < 15) {
+        self.eventDateLabel.hidden = YES;
         [theTimer invalidate];
         
+        
+        
         //launch camera
-        TimedPickerController *picker = [[TimedPickerController alloc] initWithCloud:self.eventID];
-
+        TimedPickerController *picker = [[TimedPickerController alloc] initWithCloud:self.eventID secondsToSnap:self.secondsLeft];
+        
+        [NSTimer scheduledTimerWithTimeInterval:1.0 target:picker selector:@selector(countdownTick:) userInfo:self.secondsLeft repeats:YES];
+        
+        if (self.imageView.isAnimating)
+        {
+            [self.imageView stopAnimating];
+        }
         [self.delegate presentViewController:picker animated:YES completion: ^ {
             
+            self.eventTimerLabel.hidden = NO;
             //Animation
-            [UIView animateWithDuration:5
+            /*[UIView animateWithDuration:5
                                   delay:0
                                 options:NO
                              animations:^ {
                                  picker.cameraOverlayView.alpha = 1;
-                                 picker.cameraOverlayView.transform = CGAffineTransformMakeRotation(M_PI);
+                                 //picker.cameraOverlayView.transform = CGAffineTransformMakeRotation(M_PI);
+                                 
                              }
                              completion:^(BOOL finished) {
                                  [picker takePicture];
                                  self.last20Label.hidden = YES;
+                                 self.eventDateLabel.hidden = NO;
                              }
-             ];
+             ];*/
         }];
     }
 

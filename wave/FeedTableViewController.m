@@ -9,6 +9,7 @@
 #import "FeedTableViewController.h"
 #import "EventTableViewCell.h"
 #import "EventPictures.h"
+#import "CreateViewController.h"
 
 @interface FeedTableViewController ()
 
@@ -30,28 +31,26 @@
     return self;
 }
 
-- (void) viewWillAppear:(BOOL)animated {
-    [self.tableView reloadData];
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-    self.events = [[NSMutableArray alloc]init];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+- (void) loadFromBackEnd {
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.events = [[NSMutableArray alloc]init];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Timer"];
+    [query orderByAscending:@"date"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         NSLog(@"Query to Parse");
         if (!error) {
             //sucess
             for (PFObject *object in objects) {
-                [self.events addObject:object];
+                
+                // mapping of PFObject to Dictionnary
+                NSMutableDictionary *event = [[NSMutableDictionary alloc] init];
+                [event setValue:[object objectForKey:@"description"] forKey:@"description"];
+                [event setValue:[object objectForKey:@"date"] forKey:@"date"];
+                [event setValue:[object objectForKey:@"date"] forKey:@"second"];
+                [event setValue:object.objectId forKey:@"eventID"];
+                
+                [self.events addObject:event];
             }
         } else {
             //failure
@@ -59,8 +58,32 @@
         }
         [self.tableView reloadData];
     }];
+}
+
+- (void) viewWillAppear:(BOOL)animated {
     
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
     
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    // init table of event before filling with PFQuery
+    [self loadFromBackEnd];
+    
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refreshControl;
+}
+
+- (void)refresh{
+    [self loadFromBackEnd];
+    [self.refreshControl endRefreshing];
 }
 
 - (void)didReceiveMemoryWarning
@@ -93,7 +116,7 @@
     if (cell == nil) {
         cell = [[EventTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    PFObject *object = (self.events)[indexPath.row];
+    NSMutableDictionary *object = (self.events)[indexPath.row];
     
     // Configure the cell...
     
@@ -101,7 +124,7 @@
     cell.delegate = self.navigationController;
     
     //Cell properties
-    cell.eventID = object.objectId;
+    cell.eventID = [object objectForKey:@"eventID"];
     
     //Event Timing
     NSDate *eventDate = [object objectForKey:@"date"];
@@ -133,8 +156,6 @@
                                             repeats: YES];
         }
     }
-    
-    NSLog(@"Tic");
     return cell;
 }
 
@@ -143,12 +164,32 @@
 - (void) prepareForSegue:(UIStoryboardSegue *) segue sender:(id)sender {
     
     if([segue.identifier isEqualToString:@"showEventPictures"]) {
+
+        //Pass evend ID to destination view controller
         EventPictures *pix = segue.destinationViewController;
-        
         EventTableViewCell *cell = sender;
-        
         pix.eventID = cell.eventID;
     }
+}
+
+- (IBAction)unwindToFeed:(UIStoryboardSegue *)unwindSegue {
+    
+    // Get event from unwinding ViewController
+    CreateViewController *sourceViewController = unwindSegue.sourceViewController;
+    NSMutableDictionary *event = sourceViewController.event;
+    
+    // Save to backend
+    PFObject *testTimer = [PFObject objectWithClassName:@"Timer"];
+    testTimer[@"date"] = [event objectForKey:@"date"];
+    testTimer[@"description"] = [event objectForKey:@"description"];
+    testTimer[@"second"] = [event objectForKey:@"second"];
+    
+    [testTimer saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [event setObject:testTimer.objectId forKey:@"objectId"];
+        //[self.events addObject:event];
+        [self.tableView reloadData];
+    }];
+
 }
 
 

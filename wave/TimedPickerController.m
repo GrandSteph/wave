@@ -8,10 +8,14 @@
 
 #import "TimedPickerController.h"
 
-
 @interface TimedPickerController ()
 
 @property (strong,nonatomic) CLCloudinary *cloud;
+@property (strong, nonatomic) IBOutlet UIView *CustomOverlay;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *switchCameraButton;
+@property (strong, nonatomic) IBOutlet UILabel *countDownLabel;
+@property (strong, nonatomic) NSNumber *secondsToSnap;
+- (IBAction)switchCamera:(id)sender;
 
 @end
 
@@ -27,17 +31,15 @@
         self.cameraDevice = UIImagePickerControllerCameraDeviceFront;
         self.showsCameraControls = NO;
         
-        UIImage *img = [UIImage imageNamed:@"logoWaveIn"];
-        UIImageView *overlay = [[UIImageView alloc] initWithImage:img];
-        overlay.frame = CGRectMake(120 , 400, img.size.width, img.size.height);
-        overlay.alpha = 0;
+        //UIImage *img = [UIImage imageNamed:@"logoWaveIn"];
+        //pickerOverlay *overlay = [[pickerOverlay alloc] initWithFrame:CGRectMake(0 , 0, self.view.frame.size.width, self.view.frame.size.height)];
         
-        self.cameraOverlayView = overlay;
+        //self.cameraOverlayView = overlay;
     }
     return self;
 }
 
-- (id) initWithCloud:(NSString *) eventID {
+- (id) initWithCloud:(NSString *) eventID secondsToSnap:(NSNumber *) secondsToSnap {
     self=[super init];
     if (self) {
         // Custom initialization
@@ -47,13 +49,37 @@
         self.sourceType = UIImagePickerControllerSourceTypeCamera;
         self.cameraDevice = UIImagePickerControllerCameraDeviceFront;
         self.showsCameraControls = NO;
+        self.secondsToSnap = secondsToSnap;
         
-        UIImage *img = [UIImage imageNamed:@"LogoWaveIn"];
-        UIImageView *overlay = [[UIImageView alloc] initWithImage:img];
-        overlay.frame = CGRectMake(120 , 400, img.size.width, img.size.height);
-        overlay.alpha = 0;
+//        // create button
+//        UIButton *switchButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//        [switchButton setTitle:@"Camera switch" forState:UIControlStateNormal];
+//        [switchButton sizeToFit];
+//        switchButton.center = CGPointMake(250, 40);
+//        
+//        // create label
+//        UILabel *countdown = [[UILabel alloc] init];
+//        [countdown setText:@"5"];
+//        [countdown sizeToFit];
+//        countdown.center = CGPointMake(160, 500);
+//        
+//        // Creation of overlay
+//        //UIImage *img = [UIImage imageNamed:@"LogoWaveIn"];
+//        //UIImageView *overlay = [[UIImageView alloc] initWithImage:img];
+//        UIImageView *overlay = [[UIImageView alloc] initWithFrame:CGRectMake(0 , 0, self.view.frame.size.width, self.view.frame.size.height)];
+//        overlay.opaque = NO;
+//        overlay.backgroundColor = [UIColor clearColor];
+//        [overlay addSubview:switchButton];
+//        [overlay addSubview:countdown];
+
         
-        self.cameraOverlayView = overlay;
+        [[NSBundle mainBundle] loadNibNamed:@"PickerOverlay" owner:self options:nil];
+        self.CustomOverlay.frame = self.cameraOverlayView.frame;
+        self.cameraOverlayView = self.CustomOverlay;
+        self.CustomOverlay = nil;
+
+        
+        //self.cameraOverlayView = overlay;
         
         //Cloudinary stuff
         self.cloud = [[CLCloudinary alloc] init];
@@ -72,26 +98,30 @@
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
+    // get image from Picker
     UIImage *chosenImage = info[UIImagePickerControllerOriginalImage];
-    //self.imageView.image = chosenImage;
     
-    
-    
+    // resize image, compress and transform NSData for Cloudinary
     UIImage *resizedImage = [self resizeImageWithImage:chosenImage toPixelLongest:320];
     NSData* pictureData = UIImageJPEGRepresentation(resizedImage,60);
-    
     self.pictureData = pictureData;
     
+    // Upload avec options
     CLUploader *theUploader = [[CLUploader alloc] init:self.cloud delegate:self];
-    [theUploader upload:pictureData options:@{@"public_id":[NSString stringWithFormat:@"%@STEPHANE",self.eventID]}];
-    
-    [theUploader upload:pictureData options:nil withCompletion:^(NSDictionary *successResult, NSString *errorResult, NSInteger code, id context) {
+    [theUploader upload:pictureData options:@{@"public_id":[NSString stringWithFormat:@"%@PHILIPPE",self.eventID]} withCompletion:^(NSDictionary *successResult, NSString *errorResult, NSInteger code, id context) {
+        
         //completion
         NSLog(@"Upload success. Full result=%@", successResult);
         [picker dismissViewControllerAnimated:YES completion:nil];
+    
     } andProgress:^(NSInteger bytesWritten, NSInteger totalBytesWritten, NSInteger totalBytesExpectedToWrite, id context) {
+        float total = totalBytesExpectedToWrite;
+        float current = totalBytesWritten;
+        float percent = (current / total) * 100;
+        
         //progress
-        NSLog(@"Going...");
+        self.countDownLabel.text = [NSString stringWithFormat:@" upload %1.0f%% ",percent];
+        
     }];
 }
 
@@ -134,6 +164,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) countdownTick:(NSTimer *) theTimer {
+
+    self.secondsToSnap = [NSNumber numberWithInt:[self.secondsToSnap intValue] - 1];
+    self.countDownLabel.text = [self.secondsToSnap stringValue];
+    
+    if ([self.secondsToSnap intValue] < 2) {
+        self.switchCameraButton.enabled = NO;
+    }
+    
+    if ([self.secondsToSnap intValue] == 0) {
+        [theTimer invalidate];
+        [self takePicture];
+    }
+}
+
 /*
 #pragma mark - Navigation
 
@@ -144,5 +189,13 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)switchCamera:(id)sender {
+    if (self.cameraDevice == UIImagePickerControllerCameraDeviceFront) {
+        self.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+    } else {
+        self.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+    }
+}
 
 @end

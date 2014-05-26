@@ -38,17 +38,16 @@
 
 - (IBAction)createEventButton:(id)sender {
 
+    // format date
     NSDate *chosenDate = [self.datePiecker date];
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"yyyy-MM-dd-hh-mm"];
     
-    PFObject *testTimer = [PFObject objectWithClassName:@"Timer"];
-    testTimer[@"date"] = chosenDate;
-    testTimer[@"description"] = self.eventDescription.text;
-    testTimer[@"second"] = @(0.0);
-    self.eventDescription.text = nil;
-    [self.view endEditing:YES];
-    [testTimer saveInBackground];
+    // Create object to add to events
+    self.event = [[NSMutableDictionary alloc] init];
+    [self.event setValue:self.eventDescription.text forKey:@"description"];
+    [self.event setValue:chosenDate forKey:@"date"];
+    [self.event setValue:@(0.0) forKey:@"second"];
 
 }
 @end
