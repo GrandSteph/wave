@@ -10,12 +10,17 @@
 #import "EventTableViewCell.h"
 #import "EventPictures.h"
 #import "CreateViewController.h"
+#import "TimedStillTaker.h"
 
 @interface FeedTableViewController ()
 
 @end
 
 @implementation FeedTableViewController
+- (IBAction)pushTimed:(id)sender {
+    TimedStillTaker *photoTaker = [[TimedStillTaker alloc] initWithFilterType:(GPUImageFilterType)GPUIMAGE_SEPIA];
+    [self.navigationController pushViewController:photoTaker animated:YES];
+}
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {

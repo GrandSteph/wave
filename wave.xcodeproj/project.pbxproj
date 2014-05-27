@@ -31,15 +31,21 @@
 		BDD58956191D58D90019DA57 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD58955191D58D90019DA57 /* MobileCoreServices.framework */; };
 		BDD58958191D58E10019DA57 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD58957191D58E10019DA57 /* QuartzCore.framework */; };
 		BDD5895A191D58E90019DA57 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD58959191D58E90019DA57 /* Security.framework */; };
-		BDD5895C191D58EF0019DA57 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD5895B191D58EF0019DA57 /* StoreKit.framework */; };
 		BDD5895E191D58F70019DA57 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD5895D191D58F70019DA57 /* SystemConfiguration.framework */; };
 		BDD58960191D590C0019DA57 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD5895F191D590C0019DA57 /* Social.framework */; };
-		BDD58962191D59440019DA57 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD58961191D59440019DA57 /* FacebookSDK.framework */; };
 		BDD58967191D5B3B0019DA57 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD58966191D5B3B0019DA57 /* Accounts.framework */; };
 		BDD58970191D75570019DA57 /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD5896F191D75570019DA57 /* CreateViewController.m */; };
 		BDD58973191EE0D40019DA57 /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD58972191EE0D40019DA57 /* EventTableViewCell.m */; };
 		BDD58976191F055A0019DA57 /* TimedPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD58975191F055A0019DA57 /* TimedPickerController.m */; };
 		BDD5897F192558E80019DA57 /* EventPictures.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD5897E192558E80019DA57 /* EventPictures.m */; };
+		E88786AD1933D3490081EE3D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E88786AC1933D3490081EE3D /* FacebookSDK.framework */; };
+		E88786C21933D69A0081EE3D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E88786C11933D69A0081EE3D /* CoreMedia.framework */; };
+		E88786C61933D6A30081EE3D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E88786C51933D6A30081EE3D /* CoreVideo.framework */; };
+		E88786C81933D6AB0081EE3D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E88786C71933D6AB0081EE3D /* OpenGLES.framework */; };
+		E88786CA1933D6B30081EE3D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E88786C91933D6B30081EE3D /* AVFoundation.framework */; };
+		E8D467371933F7EF00389699 /* TimedStillTaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D467351933F7EF00389699 /* TimedStillTaker.m */; };
+		E8D467381933F7EF00389699 /* TimedStillTaker.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D467361933F7EF00389699 /* TimedStillTaker.xib */; };
+		E8D4673B1933FA0400389699 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E88786B51933D3CD0081EE3D /* libGPUImage.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = BDD58905191D57D50019DA57;
 			remoteInfo = wave;
+		};
+		E88786B41933D3CD0081EE3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E88786AE1933D3CD0081EE3D /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCF1A33414DDB1EC00852800;
+			remoteInfo = GPUImage;
+		};
+		E88786B61933D3CD0081EE3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E88786AE1933D3CD0081EE3D /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCF1A34414DDB1EC00852800;
+			remoteInfo = GPUImageTests;
+		};
+		E88786B81933D4970081EE3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E88786AE1933D3CD0081EE3D /* GPUImage.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BCF1A33314DDB1EC00852800;
+			remoteInfo = GPUImage;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -87,10 +114,8 @@
 		BDD58955191D58D90019DA57 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		BDD58957191D58E10019DA57 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BDD58959191D58E90019DA57 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		BDD5895B191D58EF0019DA57 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BDD5895D191D58F70019DA57 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BDD5895F191D590C0019DA57 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		BDD58961191D59440019DA57 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../751/addons/FacebookSDK.framework; sourceTree = "<group>"; };
 		BDD58966191D5B3B0019DA57 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		BDD5896E191D75570019DA57 /* CreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateViewController.h; sourceTree = "<group>"; };
 		BDD5896F191D75570019DA57 /* CreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateViewController.m; sourceTree = "<group>"; };
@@ -100,6 +125,15 @@
 		BDD58975191F055A0019DA57 /* TimedPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimedPickerController.m; sourceTree = "<group>"; };
 		BDD5897D192558E80019DA57 /* EventPictures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventPictures.h; path = ../EventPictures.h; sourceTree = "<group>"; };
 		BDD5897E192558E80019DA57 /* EventPictures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventPictures.m; path = ../EventPictures.m; sourceTree = "<group>"; };
+		E88786AC1933D3490081EE3D /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		E88786AE1933D3CD0081EE3D /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = "../../GPUImage-master/framework/GPUImage.xcodeproj"; sourceTree = "<group>"; };
+		E88786C11933D69A0081EE3D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		E88786C51933D6A30081EE3D /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		E88786C71933D6AB0081EE3D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		E88786C91933D6B30081EE3D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E8D467341933F7EF00389699 /* TimedStillTaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimedStillTaker.h; sourceTree = "<group>"; };
+		E8D467351933F7EF00389699 /* TimedStillTaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimedStillTaker.m; sourceTree = "<group>"; };
+		E8D467361933F7EF00389699 /* TimedStillTaker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimedStillTaker.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,15 +141,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E88786CA1933D6B30081EE3D /* AVFoundation.framework in Frameworks */,
+				E88786C81933D6AB0081EE3D /* OpenGLES.framework in Frameworks */,
+				E88786C61933D6A30081EE3D /* CoreVideo.framework in Frameworks */,
+				E88786C21933D69A0081EE3D /* CoreMedia.framework in Frameworks */,
 				BDD58967191D5B3B0019DA57 /* Accounts.framework in Frameworks */,
 				BDD58960191D590C0019DA57 /* Social.framework in Frameworks */,
 				BDD5895E191D58F70019DA57 /* SystemConfiguration.framework in Frameworks */,
-				BDD5895C191D58EF0019DA57 /* StoreKit.framework in Frameworks */,
 				BDD5895A191D58E90019DA57 /* Security.framework in Frameworks */,
 				BDD58958191D58E10019DA57 /* QuartzCore.framework in Frameworks */,
 				BDD58956191D58D90019DA57 /* MobileCoreServices.framework in Frameworks */,
-				BDD58962191D59440019DA57 /* FacebookSDK.framework in Frameworks */,
 				BDD58954191D58D30019DA57 /* libz.dylib in Frameworks */,
+				E88786AD1933D3490081EE3D /* FacebookSDK.framework in Frameworks */,
+				E8D4673B1933FA0400389699 /* libGPUImage.a in Frameworks */,
 				BDD58952191D58CB0019DA57 /* CoreLocation.framework in Frameworks */,
 				BDD58950191D58BE0019DA57 /* CFNetwork.framework in Frameworks */,
 				BDD5894E191D58B50019DA57 /* AudioToolbox.framework in Frameworks */,
@@ -162,11 +200,15 @@
 		BDD58908191D57D50019DA57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E88786C91933D6B30081EE3D /* AVFoundation.framework */,
+				E88786C71933D6AB0081EE3D /* OpenGLES.framework */,
+				E88786C51933D6A30081EE3D /* CoreVideo.framework */,
+				E88786C11933D69A0081EE3D /* CoreMedia.framework */,
+				E88786AE1933D3CD0081EE3D /* GPUImage.xcodeproj */,
+				E88786AC1933D3490081EE3D /* FacebookSDK.framework */,
 				BDD58966191D5B3B0019DA57 /* Accounts.framework */,
-				BDD58961191D59440019DA57 /* FacebookSDK.framework */,
 				BDD5895F191D590C0019DA57 /* Social.framework */,
 				BDD5895D191D58F70019DA57 /* SystemConfiguration.framework */,
-				BDD5895B191D58EF0019DA57 /* StoreKit.framework */,
 				BDD58959191D58E90019DA57 /* Security.framework */,
 				BDD58957191D58E10019DA57 /* QuartzCore.framework */,
 				BDD58955191D58D90019DA57 /* MobileCoreServices.framework */,
@@ -188,6 +230,9 @@
 		BDD5890F191D57D50019DA57 /* wave */ = {
 			isa = PBXGroup;
 			children = (
+				E8D467341933F7EF00389699 /* TimedStillTaker.h */,
+				E8D467351933F7EF00389699 /* TimedStillTaker.m */,
+				E8D467361933F7EF00389699 /* TimedStillTaker.xib */,
 				BDD5897D192558E80019DA57 /* EventPictures.h */,
 				BDD5897E192558E80019DA57 /* EventPictures.m */,
 				BDD58918191D57D50019DA57 /* w1nAppDelegate.h */,
@@ -249,6 +294,15 @@
 			path = Cloudinary;
 			sourceTree = "<group>";
 		};
+		E88786AF1933D3CD0081EE3D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E88786B51933D3CD0081EE3D /* libGPUImage.a */,
+				E88786B71933D3CD0081EE3D /* GPUImageTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -263,6 +317,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E88786B91933D4970081EE3D /* PBXTargetDependency */,
 			);
 			name = wave;
 			productName = wave;
@@ -299,6 +354,11 @@
 				TargetAttributes = {
 					BDD58905191D57D50019DA57 = {
 						DevelopmentTeam = A343GVYGQ6;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					BDD58929191D57D50019DA57 = {
 						TestTargetID = BDD58905191D57D50019DA57;
@@ -316,6 +376,12 @@
 			mainGroup = BDD588FD191D57D50019DA57;
 			productRefGroup = BDD58907191D57D50019DA57 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E88786AF1933D3CD0081EE3D /* Products */;
+					ProjectRef = E88786AE1933D3CD0081EE3D /* GPUImage.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BDD58905191D57D50019DA57 /* wave */,
@@ -323,6 +389,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E88786B51933D3CD0081EE3D /* libGPUImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGPUImage.a;
+			remoteRef = E88786B41933D3CD0081EE3D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E88786B71933D3CD0081EE3D /* GPUImageTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GPUImageTests.octest;
+			remoteRef = E88786B61933D3CD0081EE3D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BDD58904191D57D50019DA57 /* Resources */ = {
@@ -333,6 +416,7 @@
 				BDD58914191D57D50019DA57 /* InfoPlist.strings in Resources */,
 				BD4869F7192D7DE800F01884 /* PickerOverlay.xib in Resources */,
 				BDD5891D191D57D50019DA57 /* Main.storyboard in Resources */,
+				E8D467381933F7EF00389699 /* TimedStillTaker.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +440,7 @@
 				BDD58916191D57D50019DA57 /* main.m in Sources */,
 				BDD58970191D75570019DA57 /* CreateViewController.m in Sources */,
 				BDD5891A191D57D50019DA57 /* w1nAppDelegate.m in Sources */,
+				E8D467371933F7EF00389699 /* TimedStillTaker.m in Sources */,
 				BDD58973191EE0D40019DA57 /* EventTableViewCell.m in Sources */,
 				BDA6C04319266EDD00FD7866 /* FeedTableViewController.m in Sources */,
 			);
@@ -376,6 +461,11 @@
 			isa = PBXTargetDependency;
 			target = BDD58905191D57D50019DA57 /* wave */;
 			targetProxy = BDD5892F191D57D50019DA57 /* PBXContainerItemProxy */;
+		};
+		E88786B91933D4970081EE3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GPUImage;
+			targetProxy = E88786B81933D4970081EE3D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -491,6 +581,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "wave/wave-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/751/GPUImage-master/framework/Source/**",
+				);
 				INFOPLIST_FILE = "wave/wave-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -516,6 +611,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "wave/wave-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/751/GPUImage-master/framework/Source/**",
+				);
 				INFOPLIST_FILE = "wave/wave-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

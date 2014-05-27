@@ -9,6 +9,9 @@
 #import "EventTableViewCell.h"
 #import "TimedPickerController.h"
 #import "EventPictures.h"
+#import "TimedPickerController.h"
+#import "TimedStillTaker.h"
+
 
 
 @interface EventTableViewCell () //<CLUploaderDelegate>
@@ -74,8 +77,11 @@
         self.eventDateLabel.hidden = YES;
         [theTimer invalidate];
         
+        TimedStillTaker *photoTaker = [[TimedStillTaker alloc] initWithFilterType:(GPUImageFilterType)GPUIMAGE_SEPIA];
+        [self.delegate pushViewController:photoTaker animated:YES];
         
-        
+        /*------------------- PRevious UIIMagePicker ---------------
+         -----------------------------------------------------------
         //launch camera
         TimedPickerController *picker = [[TimedPickerController alloc] initWithCloud:self.eventID secondsToSnap:self.secondsLeft];
         
@@ -89,7 +95,7 @@
             
             self.eventTimerLabel.hidden = NO;
             //Animation
-            /*[UIView animateWithDuration:5
+            [UIView animateWithDuration:5
                                   delay:0
                                 options:NO
                              animations:^ {
@@ -102,8 +108,10 @@
                                  self.last20Label.hidden = YES;
                                  self.eventDateLabel.hidden = NO;
                              }
-             ];*/
+             ];
         }];
+        ------------------- PRevious UIIMagePicker ---------------
+        -----------------------------------------------------------*/
     }
 
 }

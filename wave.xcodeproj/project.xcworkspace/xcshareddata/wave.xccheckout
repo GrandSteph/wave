@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2A18AD83-EE1C-4402-87CB-ED36089A3E53</string>
+	<key>IDESourceControlProjectName</key>
+	<string>wave</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5E2A5534-C709-4FA2-B019-0A5645DD4275</key>
+		<string>https://github.com/GrandSteph/751.git</string>
+		<key>DDA5B812-EDCB-460D-A6C4-BC512082FBF3</key>
+		<string>https://github.com/GrandSteph/wave.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>wave/wave/wave.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5E2A5534-C709-4FA2-B019-0A5645DD4275</key>
+		<string>../../../..</string>
+		<key>DDA5B812-EDCB-460D-A6C4-BC512082FBF3</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/GrandSteph/wave.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5E2A5534-C709-4FA2-B019-0A5645DD4275</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5E2A5534-C709-4FA2-B019-0A5645DD4275</string>
+			<key>IDESourceControlWCCName</key>
+			<string>751</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DDA5B812-EDCB-460D-A6C4-BC512082FBF3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>wave</string>
+		</dict>
+	</array>
+</dict>
+</plist>
